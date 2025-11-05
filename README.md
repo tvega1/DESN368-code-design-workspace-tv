@@ -29,7 +29,8 @@ This repository documents my learning journey in Code and Design 1 DESN368. Here
 - https://codepen.io/Tomei-Vega/pen/GgomMmx - Newspaper
 - https://codepen.io/Tomei-Vega/pen/JoGNyVY - Lost Pet
 
-## Week 2 - [Topic Title]
+
+## Week 2 - Document Architecture
 
 **Topics Covered:**
 - [List main topics]
