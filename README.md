@@ -25,9 +25,9 @@ This repository documents my learning journey in Code and Design 1 DESN368. Here
 
 **Files:**
 - https://app.milanote.com/1V3iTO19jWZh3p?p=jHMkPcMB5W4
-- https://codepen.io/Tomei-Vega/pen/jEWmGmRLinks to an external site - Favorite Band
-- https://codepen.io/Tomei-Vega/pen/GgomMmxLinks to an external site - Newspaper
-- https://codepen.io/Tomei-Vega/pen/JoGNyVYLinks to an external site - Lost Pet
+- https://codepen.io/Tomei-Vega/pen/jEWmGmR - Favorite Band
+- https://codepen.io/Tomei-Vega/pen/GgomMmx - Newspaper
+- https://codepen.io/Tomei-Vega/pen/JoGNyVY - Lost Pet
 
 ## Week 2 - [Topic Title]
 
