@@ -24,9 +24,10 @@ This repository documents my learning journey in Code and Design 1 DESN368. Here
 [Write 1-2 sentences about what you learned or found most interesting]
 
 **Files:**
-- [Link to specific files or note what's in the week-1 folder]
-
----
+- https://app.milanote.com/1V3iTO19jWZh3p?p=jHMkPcMB5W4
+- https://codepen.io/Tomei-Vega/pen/jEWmGmRLinks to an external site - Favorite Band
+- https://codepen.io/Tomei-Vega/pen/GgomMmxLinks to an external site - Newspaper
+- https://codepen.io/Tomei-Vega/pen/JoGNyVYLinks to an external site - Lost Pet
 
 ## Week 2 - [Topic Title]
 
