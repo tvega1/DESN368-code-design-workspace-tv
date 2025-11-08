@@ -76,7 +76,7 @@ I learned how the cascade and specificity affect how CSS rules are applied.
 - 03-grouping-selectors: [https://codepen.io/Tomei-Vega/pen/NPxMLQE]
 - 04-chaining-selectors: [https://codepen.io/Tomei-Vega/pen/XJXqxbm]
 - 05-descendant-combinator: [https://codepen.io/Tomei-Vega/pen/dPGegYz]
-Cascade Exercise: 6. 01-cascade-fix: [https://codepen.io/Tomei-Vega/pen/myVLzVx]
+- Cascade Exercise: 6. 01-cascade-fix: [https://codepen.io/Tomei-Vega/pen/myVLzVx]
 
 ---
 
