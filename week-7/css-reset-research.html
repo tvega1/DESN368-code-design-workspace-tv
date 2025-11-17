@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>CSS Reset Research — Week 7</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+  <h1>CSS Reset, Normalize.css, & Boilerplates — Research</h1>
+  <p><strong>Class:</strong> DESN 368 · Week 7</p>
+
+  <h2>1. Why reset at all?</h2>
+  <p>
+    Browsers all come with their own default CSS — different margins, fonts, spacing, button styles, etc.
+    These inconsistencies cause layout problems.  
+    A CSS reset removes these default styles so every browser starts from the same baseline.
+  </p>
+
+  <h2>2. Eric Meyer (2007) vs Josh Comeau (Modern Reset)</h2>
+  <h3>Eric Meyer Reset (2007)</h3>
+  <ul>
+    <li>Extremely aggressive — removes ALL margins, padding, borders.</li>
+    <li>Forces you to restyle everything manually.</li>
+    <li>Goal: total control over your design.</li>
+  </ul>
+
+  <h3>Josh Comeau’s Modern Reset</h3>
+  <ul>
+    <li>Keeps useful defaults (less destructive).</li>
+    <li>Adds modern best practices like <code>box-sizing: border-box;</code>.</li>
+    <li>Improves text rendering and scrolling.</li>
+  </ul>
+
+  <h3>Why Josh over Eric?</h3>
+  <ol>
+    <li>Eric’s reset wipes too much — lots of extra work.</li>
+    <li>Josh’s reset uses modern features and accessibility improvements.</li>
+    <li>Josh keeps helpful defaults so you restyle less.</li>
+  </ol>
+
+  <h2>3. How to use a reset or normalize</h2>
+  <p>You include it at the TOP of your CSS like this:</p>
+
+  <pre><code>&lt;link rel="stylesheet" href="reset.css"&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+</code></pre>
+
+
+  <h2>4. What’s a CSS boilerplate?</h2>
+  <p>
+    A boilerplate is MORE than a reset. It includes:
+  </p>
+  <ul>
+    <li>Reset or normalize styles</li>
+    <li>Base typography</li>
+    <li>Starter layout styles</li>
+  </ul>
+  <p>Basically: a starter kit for CSS projects.</p>
+
+  <h2>5. Reset vs Normalize.css</h2>
+  <h3>Reset</h3>
+  <ul>
+    <li>Removes EVERYTHING.</li>
+    <li>You rebuild all styles from zero.</li>
+  </ul>
+
+  <ul>
+    <li>Keeps useful defaults.</li>
+    <li>Makes browsers consistent.</li>
+    <li>Smoother and more user-friendly.</li>
+    <li>Less extreme.</li>
+  </ul>
+
+  <h2>6. Other reset approaches I found</h2>
+  <ul>
+    <li>Andy Bell’s modern CSS reset</li>
+    <li>Tailwind CSS “Preflight” reset</li>
+  </ul>
+
+  <h2>7. Sources</h2>
+  <ul>
+    <li>Eric Meyer — Reset Reasoning (2007)</li>
+    <li>Josh Comeau — A Modern CSS Reset</li>
+    <li>Perishable Press — Killer Collection of CSS Resets</li>
+  </ul>
+
+  <p><a href="../index.html">← Back to Main Index</a></p>
+</body>
+</html>
