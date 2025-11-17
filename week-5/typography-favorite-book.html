@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Typography Exercise – Favorite Book</title>
+  <meta name="description" content="Typography exercise page with strong hierarchy, readable measure, and responsive type scale." />
+
+  <!-- Google Fonts: display-swap to avoid FOIT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&family=Literata:opsz,wght@7..72,400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ---------------------------------------------
+       Design tokens
+    --------------------------------------------- */
+    :root {
+      /* Color system */
+      --bg: #fff;
+      --ink: #101418;
+      --muted: #5b6876;
+      --line: #e8edf2;
+      --accent: #3a7afe;
+
+      /* Typefaces */
+      --serif: "Literata", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      --sans: "Work Sans", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+
+      /* Type scale (fluid): clamp(min, vw-based, max) */
+      --step--1: clamp(0.88rem, 0.86rem + 0.1vw, 0.95rem);
+      --step-0:  clamp(1.00rem, 0.97rem + 0.35vw, 1.125rem); /* base */
+      --step-1:  clamp(1.25rem, 1.15rem + 0.8vw, 1.5rem);
+      --step-2:  clamp(1.55rem, 1.35rem + 1.4vw, 2.1rem);
+      --step-3:  clamp(2.0rem,  1.6rem + 2.4vw, 2.8rem);
+      --step-4:  clamp(2.5rem,  1.9rem + 3.6vw, 3.6rem);
+
+      /* Rhythm */
+      --leading-body: 1.7;
+      --leading-tight: 1.2;
+      --measure: 68ch; /* max line length */
+
+      /* Spacing scale */
+      --space-1: 0.375rem;
+      --space-2: 0.75rem;
+      --space-3: 1.125rem;
+      --space-4: 1.75rem;
+      --space-5: 2.5rem;
+      --radius: 14px;
+      --shadow: 0 10px 25px rgba(0,0,0,.06);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0e1116;
+        --ink: #eef1f4;
+        --muted: #9ba7b6;
+        --line: #1b2230;
+        --accent: #76a0ff;
+      }
+    }
+
+    /* ---------------------------------------------
+       Base
+    --------------------------------------------- */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, var(--bg), var(--bg)) fixed;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: var(--step-0);
+      line-height: var(--leading-body);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      hanging-punctuation: first allow-end;
+      hyphens: auto;
+      text-wrap: pretty;
+    }
+
+    .site {
+      max-width: 92rem;
+      margin-inline: auto;
+      padding: var(--space-4) min(5vw, 3rem) var(--space-5);
+    }
+
+    header.site-header {
+      font-family: var(--sans);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-3) clamp(0rem, 1vw, 1rem);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      backdrop-filter: saturate(110%) blur(6px);
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      z-index: 10;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: var(--step-1);
+      letter-spacing: 0.2px;
+    }
+
+    .meta {
+      display: flex; gap: .75rem; align-items: center;
+      font-size: var(--step--1);
+      color: var(--muted);
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      padding: .35rem .6rem;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--bg) 86%, transparent);
+    }
+
+    main { display: grid; gap: var(--space-5); margin-top: var(--space-4); }
+
+    /* ---------------------------------------------
+       Section 1 – Book content
+    --------------------------------------------- */
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(1.25rem, 2.2vw, 2rem);
+    }
+
+    .book-header { margin-bottom: var(--space-4); }
+    .book-author { font-family: var(--sans); font-weight: 500; color: var(--muted); font-size: var(--step--1); }
+    .book-title { font-family: var(--serif); font-weight: 700; font-size: var(--step-3); line-height: var(--leading-tight); margin: .25rem 0; }
+    .chapter-id { font-family: var(--sans); font-weight: 700; color: var(--accent); font-size: var(--step--1); letter-spacing: .12em; text-transform: uppercase; }
+    .chapter-title { font-family: var(--serif); font-size: var(--step-2); margin-top: .35rem; }
+
+    article.book {
+      max-width: var(--measure);
+    }
+
+    article.book p { margin: 0 0 1em; text-wrap: pretty; }
+    article.book p + p { text-indent: 1.25em; }
+
+    blockquote.epigraph {
+      font-style: italic;
+      color: var(--muted);
+      border-left: 3px solid var(--line);
+      padding-left: 1rem;
+      margin: 0 0 var(--space-3);
+    }
+
+    /* ---------------------------------------------
+       Section 2 – Rationale / reflection
+    --------------------------------------------- */
+    .reflection { font-family: var(--sans); }
+    .reflection h2 { font-size: var(--step-2); line-height: var(--leading-tight); margin: 0 0 .5rem; }
+    .reflection p { color: var(--ink); max-width: 70ch; }
+    .key-points { display: grid; gap: .6rem; margin: var(--space-3) 0; }
+    .key-points li { padding-left: .6rem; }
+
+    /* ---------------------------------------------
+       Utilities
+    --------------------------------------------- */
+    .stack > * + * { margin-top: var(--space-3); }
+    .cluster { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+    .muted { color: var(--muted); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+    /* ---------------------------------------------
+       Narrow view tweaks
+    --------------------------------------------- */
+    @media (max-width: 720px) {
+      header.site-header { grid-template-columns: 1fr; }
+      .book-title { font-size: var(--step-2); }
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+    
+
+    <main>
+      <!-- =========================== -->
+      <!-- Section 1: Book text        -->
+      <!-- =========================== -->
+      <section id="book" class="card stack" aria-labelledby="book-heading">
+        <div class="book-header">
+          <div class="book-author">Franz Kafka</div>
+          <h1 class="book-title" id="book-heading">The Metamorphosis</h1>
+          <div class="cluster muted" role="group" aria-label="Chapter meta">
+            <div class="chapter-id">Part I</div>
+            <div aria-hidden="true">·</div>
+            <div class="chapter-title">The Transformation</div>
+          </div>
+        </div>
+
+        <blockquote class="epigraph" cite="https://www.gutenberg.org/ebooks/5200">
+          "One morning, after uneasy dreams, Gregor Samsa found himself transformed in his bed into a gigantic insect."
+        </blockquote>
+
+        <article class="book" aria-label="Book excerpt">
+          <p>As Gregor Samsa awoke one morning from uneasy dreams he found himself transformed in his bed into a gigantic insect. He was lying on his hard, as it were armor-plated, back and when he lifted his head a little he could see his dome-like brown belly divided into stiff arched segments on top of which the bed quilt could hardly keep in position and was about to slide off completely. His numerous legs, which were pitifully thin compared to the rest of his bulk, waved helplessly before his eyes.</p>
+          <p>“What has happened to me?” he thought. It was no dream. His room, a regular human bedroom, only rather too small, lay quiet between the four familiar walls. Above the table on which a collection of cloth samples was unpacked and spread out — Samsa was a commercial traveler — hung the picture which he had recently cut out of an illustrated magazine and put into a pretty gilt frame. It showed a lady, with a fur cap on and a fur stole, sitting upright and holding out to the spectator a huge fur muff into which the whole of her forearm had vanished!</p>
+          <p>Gregor's eyes turned next to the window, and the overcast sky — one could hear rain drops beating on the window gutter — made him quite melancholy. What about sleeping a little longer and forgetting all this nonsense, he thought, but it could not be done, for he was accustomed to sleep on his right side and in his present condition he could not turn himself over. However violently he forced himself towards his right side he always rolled on to his back again. He tried it at least a hundred times, shutting his eyes to keep from seeing his struggling legs, and only desisted when he began to feel in his side a faint dull ache he had never experienced before.</p>
+        </article>
+      </section>
+
+      <!-- =========================== -->
+      <!-- Section 2: Rationale        -->
+      <!-- =========================== -->
+      <section id="reflection" class="card reflection" aria-labelledby="why-heading">
+        <h2 id="why-heading">Design Rationale</h2>
+        <p><strong>Why this book:</strong> I chose <em>The Metamorphosis</em> because its first moments drop the reader into a bizarre reality without warning. The calm, almost ordinary tone describing such a disturbing transformation creates tension that feels intentional and unsettling — perfect for exploring how typography influences mood and meaning.</p>
+        <div class="stack">
+          <p><strong>Typography choices:</strong> I used <em>Literata</em> for the body to give the text a classic, book-like feel that supports longer reading. For headings, <em>Work Sans</em> provides a subtle modern contrast, giving structure without distracting from the narrative. A fluid type scale ensures that both fonts adapt comfortably across different screen sizes.</p>
+          <ul class="key-points">
+            <li><strong>Sizes:</strong> A modular scale—from base <code>var(--step-0)</code> up to <code>--step-4</code>—maintains consistency and visual rhythm.</li>
+            <li><strong>Line height:</strong> Body text set at <code>1.7</code> helps Kafka’s longer sentences remain easy to follow, while headings are tightened for emphasis.</li>
+            <li><strong>Measure:</strong> Limiting paragraphs to <code>68ch</code> improves readability and reduces eye strain.</li>
+            <li><strong>Spacing:</strong> Indented paragraphs and intentional white space guide the reader through the text logically.</li>
+            <li><strong>Readability:</strong> Hyphenation and improved text wrapping keep the rag smooth and the paragraphs visually balanced.</li>
+            <li><strong>Responsive:</strong> Fluid type and layout paired with dark-mode support creates a comfortable experience on any device.</li>
+            <li><strong>Accessibility:</strong> Clear hierarchy, strong contrast, and semantic HTML support more inclusive reading.</li>
+          </ul>
+          <p><strong>Visual hierarchy:</strong> The structure — author, title, part label, then chapter title — mirrors how a physical book signals importance and sets context. A subtle accent color reinforces the cold, matter-of-fact tone that defines Gregor’s transformation.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="stack" style="margin-top: var(--space-5); font-family: var(--sans); color: var(--muted);">
+      <p> Tomei Vega • Typography Exercise</p>
+    </footer>
+  </div>
+</body>
+</html>
