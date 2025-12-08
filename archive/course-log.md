@@ -62,17 +62,17 @@ As you complete each tool setup, **come back and update the "My Toolkit" section
 ## 🎯 **Course Progress**
 *Check off assignments as you complete them:*  
 
-- [ ] **Week 1:** S3tup & 0nb04rd1ng  
-- [ ] **Week 2:** Th3 F1r5t T4g  
-- [ ] **Week 3:** D0cum3nt 4rch1t3ctur3  
-- [ ] **Week 4:** Th3 C4sc4d3 B3g1n5  
-- [ ] **Week 5:** F0rm5 & 1nput5  
-- [ ] **Week 6:** Fl3xb0x M45t3ry  
-- [ ] **Week 7:** Tr1but3 P4g3  
-- [ ] **Week 8:** Gr1d Sy5t3m5  
-- [ ] **Week 9:** Pr0duct L4nd1ng  
-- [ ] **Week 10:** P0rtf0l10 Sy5t3m  
-- [ ] **Week 11:** Sh1p 1t  
+- [x] **Week 1:** S3tup & 0nb04rd1ng  
+- [x] **Week 2:** Th3 F1r5t T4g  
+- [x] **Week 3:** D0cum3nt 4rch1t3ctur3  
+- [x] **Week 4:** Th3 C4sc4d3 B3g1n5  
+- [x] **Week 5:** F0rm5 & 1nput5  
+- [x] **Week 6:** Fl3xb0x M45t3ry  
+- [x] **Week 7:** Tr1but3 P4g3  
+- [x] **Week 8:** Gr1d Sy5t3m5  
+- [x] **Week 9:** Pr0duct L4nd1ng  
+- [x] **Week 10:** P0rtf0l10 Sy5t3m  
+- [x] **Week 11:** Sh1p 1t  
 
 ---
 
