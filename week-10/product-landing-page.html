@@ -170,9 +170,56 @@
     <!-- PRICING -->
     <section class="section pricing" id="pricing">
       <div class="container">
-         
-        </div>
+        <h2 class="section-title">Choose Your Plan</h2>
+        <p class="section-subtitle">Flexible monthly delivery options for every household</p>
+        
+        <!-- COMPARISON TABLE -->
+        <table class="comparison-table">
+          <caption class="sr-only">Plan Comparison</caption>
+          <thead>
+            <tr>
+              <th scope="col">Feature</th>
+              <th scope="col">Purrfessional</th>
+              <th scope="col">Big Meow</th>
+              <th scope="col">Meowgillionaire</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Bags per month</th>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <th scope="row">Odor control</th>
+              <td>10 days</td>
+              <td>14 days</td>
+              <td>14 days</td>
+            </tr>
+            <tr>
+              <th scope="row">Dust-free formula</th>
+              <td>✓</td>
+              <td>✓</td>
+              <td>✓</td>
+            </tr>
+            <tr>
+              <th scope="row">Biodegradable</th>
+              <td>✓</td>
+              <td>✓</td>
+              <td>Premium blend</td>
+            </tr>
+            <tr>
+              <th scope="row">Early access</th>
+              <td>—</td>
+              <td>—</td>
+              <td>✓</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
+      <div class="container">
         <div class="pricing-grid">
           
           <!-- Plan 1 -->
@@ -232,6 +279,46 @@
             <button class="btn btn-outline full-width">Subscribe</button>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section class="section contact-form-section">
+      <div class="container">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-subtitle">Questions? We're here to help you find the purrfect plan.</p>
+        
+        <form class="contact-form" action="#" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required aria-required="true">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required aria-required="true">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="cats">Number of Cats</label>
+            <select id="cats" name="cats">
+              <option value="">Select...</option>
+              <option value="1">1 cat</option>
+              <option value="2">2 cats</option>
+              <option value="3">3 cats</option>
+              <option value="4+">4+ cats</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-dark full-width">Send Message</button>
+        </form>
       </div>
     </section>
   </main>
