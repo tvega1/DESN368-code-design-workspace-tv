@@ -43,14 +43,6 @@ A tribute site celebrating a notable figure with structured layout and responsiv
 An interactive research guide with sidebar navigation, persistent active states, and mobile-first responsive design.  
 [View Project](./week-6/fieldguide-site/fieldguide.html)
 
-**Case Study**  
-A detailed case study exploring design and development decisions with responsive layout and navigation.  
-[View Project](./week-6/casestudy.html)
-
-**CSS Reset Research**  
-Research and exploration of CSS reset techniques, normalize.css, and modern best practices.  
-[View Project](./week-7/css-reset-research.html)
-
 **Product Landing Page**  
 A responsive landing page showcasing product design and layout techniques using HTML and CSS.  
 [View Project](./week-10/product-landing-page.html)
