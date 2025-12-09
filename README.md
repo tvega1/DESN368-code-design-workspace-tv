@@ -78,7 +78,7 @@ A responsive landing page showcasing product design and layout techniques using 
 - Eric Meyer — CSS Reset (2007)
 
 **AI Assistance**
-- Used Chatgpt for debugging CSS layout issues and generating code templates
+- Made with help from ChatGPT and GitHub Copilot
 
 ---
 
